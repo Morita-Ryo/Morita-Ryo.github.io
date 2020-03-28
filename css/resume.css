@@ -190,3 +190,27 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+
+.calendar {position: relative;}
+.calendar::before {
+  content: "";
+  display: block;
+  padding-top: calc(90% * 16 / 9);
+}
+.calendar iframe {
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+  min-height: 480px;
+  position: absolute;
+  top: 5px;
+}
+
+@media screen and (min-width: 500px) {
+  .calendar iframe {
+    max-width: 700px;
+    /* height: calc(100% * 16 / 9); */
+    max-height: 900px;
+  }
+}
